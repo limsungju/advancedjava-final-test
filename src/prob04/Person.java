@@ -6,9 +6,14 @@ public class Person {
 	private String name;
 	
 	public Person( String name ){
+		this.name = name;
+		//System.out.println("나이는 12살, 이름은 " + this.name);
 	}
 	
 	public Person(int age, String name){
+		this.age = age;
+		this.name = name;
+		//System.out.println("나이는 " + this.age + ", 이름은 " + this.name);
 	}
 	
 	public int getAge() {
@@ -26,10 +31,16 @@ public class Person {
 	public void selfIntroduce(){
 		// "내 이름은 ...이며, 나이는 ...살입니다." 출력함
 		// 예) 내이름은 김철수이며, 나이는 19살 입니다.
+		if(this.age == 0) {
+			System.out.println("내 이름은 " + this.name + ", 나이는 " + 12 + "입니다.");
+		} else {
+			System.out.println("내 이름은 " + this.name + ", 나이는 " + this.age + "입니다.");
+		}
 	}
 
 	static int getPopulation(){
-		// 전체 인구수를 return 함
+		numberOfPerson += 1;
+		return numberOfPerson;
 	}
 }
 
